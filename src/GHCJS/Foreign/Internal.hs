@@ -1,6 +1,11 @@
-{-# LANGUAGE ForeignFunctionInterface, UnliftedFFITypes, JavaScriptFFI,
-    UnboxedTuples, DeriveDataTypeable, GHCForeignImportPrim,
-    MagicHash, FlexibleInstances, BangPatterns, Rank2Types, CPP #-}
+{-# LANGUAGE CPP #-}
+#if __GLASGOW_HASKELL__ < 908
+{-# LANGUAGE ForeignFunctionInterface #-}
+{-# LANGUAGE JavaScriptFFI #-}
+{-# LANGUAGE UnliftedFFITypes #-}
+#endif
+{-# LANGUAGE UnboxedTuples, DeriveDataTypeable, GHCForeignImportPrim,
+    MagicHash, FlexibleInstances, BangPatterns, Rank2Types #-}
 
 {- | Basic interop between Haskell and JavaScript.
 

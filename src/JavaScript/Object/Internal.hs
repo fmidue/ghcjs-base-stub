@@ -1,6 +1,9 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveDataTypeable #-}
+#if __GLASGOW_HASKELL__ < 908
 {-# LANGUAGE ForeignFunctionInterface #-}
 {-# LANGUAGE JavaScriptFFI #-}
+#endif
 {-# LANGUAGE UnboxedTuples #-}
 {-# LANGUAGE GHCForeignImportPrim #-}
 {-# LANGUAGE EmptyDataDecls #-}

@@ -1,5 +1,10 @@
-{-# LANGUAGE ForeignFunctionInterface, JavaScriptFFI,
-             UnliftedFFITypes, DeriveDataTypeable, MagicHash
+{-# LANGUAGE CPP #-}
+#if __GLASGOW_HASKELL__ < 908
+{-# LANGUAGE ForeignFunctionInterface #-}
+{-# LANGUAGE JavaScriptFFI #-}
+{-# LANGUAGE UnliftedFFITypes #-}
+#endif
+{-# LANGUAGE DeriveDataTypeable, MagicHash
   #-}
 
 {- | GHCJS has two types of threads. Regular, asynchronous threads are

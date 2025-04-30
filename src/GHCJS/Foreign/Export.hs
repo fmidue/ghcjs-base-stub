@@ -1,7 +1,10 @@
 {-# OPTIONS_GHC -Wno-redundant-constraints #-}
+{-# LANGUAGE CPP #-}
+#if __GLASGOW_HASKELL__ < 908
 {-# LANGUAGE ForeignFunctionInterface #-}
 {-# LANGUAGE JavaScriptFFI #-}
 {-# LANGUAGE UnliftedFFITypes #-}
+#endif
 {-# LANGUAGE GHCForeignImportPrim #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE UnboxedTuples #-}

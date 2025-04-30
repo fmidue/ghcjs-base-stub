@@ -1,5 +1,10 @@
 {-# OPTIONS_GHC -Wno-redundant-constraints #-}
-{-# LANGUAGE ScopedTypeVariables, ForeignFunctionInterface, JavaScriptFFI #-}
+{-# LANGUAGE CPP #-}
+#if __GLASGOW_HASKELL__ < 908
+{-# LANGUAGE ForeignFunctionInterface #-}
+{-# LANGUAGE JavaScriptFFI #-}
+#endif
+{-# LANGUAGE ScopedTypeVariables #-}
 
 module JavaScript.Cast ( Cast(..)
                        , cast

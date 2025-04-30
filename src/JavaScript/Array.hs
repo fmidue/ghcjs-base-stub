@@ -1,4 +1,8 @@
-{-# LANGUAGE ForeignFunctionInterface, JavaScriptFFI #-}
+{-# LANGUAGE CPP #-}
+#if __GLASGOW_HASKELL__ < 908
+{-# LANGUAGE ForeignFunctionInterface #-}
+{-# LANGUAGE JavaScriptFFI #-}
+#endif
 module JavaScript.Array
     ( JSArray
     , MutableJSArray

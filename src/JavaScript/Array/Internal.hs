@@ -1,6 +1,12 @@
-{-# LANGUAGE ForeignFunctionInterface, JavaScriptFFI, DataKinds, KindSignatures,
+{-# LANGUAGE CPP #-}
+#if __GLASGOW_HASKELL__ < 908
+{-# LANGUAGE ForeignFunctionInterface #-}
+{-# LANGUAGE JavaScriptFFI #-}
+{-# LANGUAGE UnliftedFFITypes #-}
+#endif
+{-# LANGUAGE DataKinds, KindSignatures,
              PolyKinds, UnboxedTuples, GHCForeignImportPrim, DeriveDataTypeable,
-             UnliftedFFITypes, MagicHash
+             MagicHash
   #-}
 module JavaScript.Array.Internal where
 
